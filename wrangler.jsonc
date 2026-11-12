@@ -9,10 +9,9 @@
 		"directory": "./public"
 	},
 
-	// Phase 1: serve only on workers.dev so the page can be checked before
-	// cutover. Phase 2 (see README) replaces this with the custom domain:
-	//   "workers_dev": false,
-	//   "routes": [{ "pattern": "jrduncans.com", "custom_domain": true }]
-	"workers_dev": true,
+	// Serve only on the canonical domain. Deploying creates its DNS record and
+	// certificate. www.jrduncans.com redirects here via a zone Redirect Rule.
+	"routes": [{ "pattern": "jrduncans.com", "custom_domain": true }],
+	"workers_dev": false,
 	"preview_urls": false
 }

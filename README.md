@@ -42,9 +42,10 @@ The page used to be served from the Mac mini through Cloudflare Tunnel (the
    tunnel → Public Hostnames: delete `jrduncans.com` and `www.jrduncans.com`.
    Then in DNS, delete their CNAME records if they're still there. The site is
    down from here until step 4 finishes deploying, usually a minute or two.
-4. **Attach the custom domain.** In `wrangler.jsonc`, replace
-   `"workers_dev": true` with the phase 2 lines from the comment, then push.
-   The deploy creates the DNS record and certificate for `jrduncans.com`.
+4. **Attach the custom domain.** Push the commit that sets `routes` to the
+   `jrduncans.com` custom domain and `workers_dev` to `false` (before it,
+   the Worker served only on workers.dev). The deploy creates the DNS record
+   and certificate for `jrduncans.com`.
 5. **Redirect www.** DNS → add an `AAAA` record `www` → `100::`, proxied.
    Rules → Redirect Rules → create from the "Redirect from WWW to root"
    template, with status 308 and the query string preserved.
