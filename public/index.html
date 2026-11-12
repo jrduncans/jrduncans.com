@@ -125,7 +125,9 @@
 		}
 
 		.cards a {
-			display: block;
+			display: flex;
+			align-items: flex-start;
+			gap: 0.85rem;
 			height: 100%;
 			padding: 1.1rem 1.25rem;
 			background: var(--surface);
@@ -144,6 +146,19 @@
 		.cards a:focus-visible {
 			outline: 2px solid var(--accent);
 			outline-offset: 2px;
+		}
+
+		.icon {
+			flex: none;
+			color: var(--accent);
+			width: 2rem;
+			height: 2rem;
+			margin-top: 0.1rem;
+			fill: none;
+			stroke: var(--accent);
+			stroke-width: 1.75;
+			stroke-linecap: round;
+			stroke-linejoin: round;
 		}
 
 		.name {
@@ -209,14 +224,29 @@
 			<ul class="cards">
 				<li>
 					<a href="https://nwsl.jrduncans.com/">
-						<span class="name">NWSL by the Numbers</span>
-						<span class="detail">Stats and season data for the National Women's Soccer League.</span>
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><g stroke-width=".8"><circle cx="12" cy="12" r="9"/><path d="M12 6.83L12 9.56M13.43 13.97L15.04 16.18M18.88 12.53Q18.6 14.14 17.87 15.61M5.12 12.53Q5.4 14.14 6.13 15.61M14.63 5.62Q16.08 6.39 17.25 7.53M13.62 18.7Q12 18.93 10.38 18.7M9.37 5.62Q7.92 6.39 6.75 7.53M9.68 11.25L7.08 10.4M10.57 13.97L8.96 16.18M16.92 10.4L14.32 11.25"/><path fill="currentColor" d="M12 9.56Q10.8 10.35 9.68 11.25Q10.06 12.63 10.57 13.97Q12 14.04 13.43 13.97Q13.94 12.63 14.32 11.25ZM10.38 18.7Q9.54 17.54 8.96 16.18Q7.49 16.05 6.13 15.61Q5.58 16.82 5.33 18.04A9 9 0 0 0 8.32 20.21ZM5.12 12.53Q5.97 11.38 7.08 10.4Q6.76 8.96 6.75 7.53Q5.43 7.38 4.2 7.52A9 9 0 0 0 3.05 11.04ZM17.25 7.53Q17.24 8.96 16.92 10.4Q18.03 11.38 18.88 12.53Q20.03 11.87 20.95 11.04A9 9 0 0 0 19.8 7.52ZM9.37 5.62Q10.73 6.08 12 6.83Q13.27 6.08 14.63 5.62Q14.36 4.32 13.85 3.19A9 9 0 0 0 10.15 3.19ZM17.87 15.61Q16.51 16.05 15.04 16.18Q14.46 17.54 13.62 18.7Q14.6 19.6 15.68 20.21A9 9 0 0 0 18.67 18.04Z"/></g></svg>
+						<span>
+							<span class="name">NWSL by the Numbers</span>
+							<span class="detail">Stats and season data for the National Women's Soccer League.</span>
+						</span>
 					</a>
 				</li>
 				<li>
 					<a href="https://marketplace.visualstudio.com/items?itemName=jrduncans.markdown-mode-memory">
-						<span class="name">Markdown Mode Memory</span>
-						<span class="detail">A VS Code extension that remembers your preferred Markdown view in each workspace.</span>
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 15V9l3 3 3-3v6M17 9v6m-2-2 2 2 2-2"/></svg>
+						<span>
+							<span class="name">Markdown Mode Memory</span>
+							<span class="detail">A VS Code extension that remembers your preferred Markdown view in each workspace.</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/jrduncans/timeturner">
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+						<span>
+							<span class="name">Timeturner</span>
+							<span class="detail">Parse and convert date-times in Alfred or on the command-line.</span>
+						</span>
 					</a>
 				</li>
 			</ul>
@@ -227,8 +257,11 @@
 			<ul class="cards">
 				<li>
 					<a href="https://www.stephenduncanjr.com/">
-						<span class="name">stephenduncanjr.com</span>
-						<span class="detail">Posts on software and whatever else I'm thinking about.</span>
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></svg>
+						<span>
+							<span class="name">stephenduncanjr.com</span>
+							<span class="detail">Posts on software and whatever else I'm thinking about.</span>
+						</span>
 					</a>
 				</li>
 			</ul>
