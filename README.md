@@ -7,6 +7,8 @@ static assets; no Worker script runs.
 ```text
 public/index.html   the page (inline CSS, no JavaScript)
 public/_headers     security headers applied to every response
+public/favicon.*    site icon: favicon.svg is the source; favicon.ico (16-48 px)
+public/apple-touch-icon*.png   180 px icon iOS requests from the site root
 wrangler.jsonc      Worker name, assets directory, and custom domain
 ```
 
